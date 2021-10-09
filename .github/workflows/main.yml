@@ -23,10 +23,10 @@ jobs:
           REPO: '${{ github.repository }}'
 
       # https://github.com/marketplace/actions/push-to-ghcr
-      - name: Build and publish a Docker image for ${{ REPO_LC }}
+      - name: Build and publish a Docker image for ${{ github.REPO_LC }}
         uses: macbre/push-to-ghcr@master
         with:
-          image_name: ${{ REPO_LC }}
+          image_name: ${{ github.REPO_LC }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
           # optionally push to the Docker Hub (docker.io)
           # docker_io_token: ${{ secrets.DOCKER_IO_ACCESS_TOKEN }}  # see https://hub.docker.com/settings/security
