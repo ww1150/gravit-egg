@@ -24,7 +24,7 @@
 
 FROM        ghcr.io/pterodactyl/yolks:java_16
 
-LABEL       author="Matthew Penner. MeProject contributors." maintainer="support@meproject.ru"
+LABEL       author="Matthew Penner. MeProject Studio contributors." maintainer="support@meproject.ru"
 
 LABEL       org.opencontainers.image.source="https://github.com/MeProject-Studio/gravit-yolk"
 LABEL       org.opencontainers.image.licenses=MIT
