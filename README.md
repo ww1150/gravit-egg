@@ -1,2 +1,2 @@
 # gravit-yolk
-This is Pterodactyl Yolk for Gravit LaunchServer
+This Pterodactyl Yolk was made for Gravit Launchserver and includes **OpenJFX** as jmods
