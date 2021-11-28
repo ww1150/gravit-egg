@@ -22,7 +22,7 @@
 #
 # 
 
-FROM        ghcr.io/pterodactyl/yolks:java_16
+FROM        ghcr.io/pterodactyl/yolks:java_17
 
 LABEL       author="Matthew Penner. MeProject Studio contributors." maintainer="support@meproject.ru"
 
