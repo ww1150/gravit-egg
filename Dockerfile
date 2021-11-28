@@ -28,6 +28,7 @@ LABEL       author="Matthew Penner. MeProject Studio contributors." maintainer="
 
 LABEL       org.opencontainers.image.source="https://github.com/MeProject-Studio/gravit-yolk"
 LABEL       org.opencontainers.image.licenses=MIT
+LABEL org.opencontainers.image.description="This Yolk is made for Pterodactyl panel as part of GravitLauncher Egg. Based on official Pterodactyl yolk for Java 17"
 
 USER        root
 RUN         apt install -y curl unzip
