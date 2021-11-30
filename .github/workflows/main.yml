@@ -23,11 +23,11 @@ jobs:
           REPO: '${{ github.repository }}'
 
       # https://github.com/marketplace/actions/push-to-ghcr
-      - name: Build and publish a Docker image for ${{ env.REPO_LC }}
+      - name: Build and publish an image for ${{ env.REPO_LC }}-java11
         uses: macbre/push-to-ghcr@master
         with:
           dockerfile: java11/Dockerfile
-          image_name: ${{ env.REPO_LC }}/java11
+          image_name: ${{ env.REPO_LC }}-java11
           github_token: ${{ secrets.GITHUB_TOKEN }}
           # optionally push to the Docker Hub (docker.io)
           # docker_io_token: ${{ secrets.DOCKER_IO_ACCESS_TOKEN }}  # see https://hub.docker.com/settings/security
@@ -43,11 +43,11 @@ jobs:
         env:
           REPO: '${{ github.repository }}'
 
-      - name: Build and publish a Docker image for ${{ env.REPO_LC }}
+      - name: Build and publish an image for ${{ env.REPO_LC }}-java16
         uses: macbre/push-to-ghcr@master
         with:
           dockerfile: java16/Dockerfile
-          image_name: ${{ env.REPO_LC }}_java16
+          image_name: ${{ env.REPO_LC }}-java16
           github_token: ${{ secrets.GITHUB_TOKEN }}
           
   docker_publish_java17:
@@ -61,9 +61,9 @@ jobs:
         env:
           REPO: '${{ github.repository }}'
 
-      - name: Build and publish a Docker image for ${{ env.REPO_LC }}
+      - name: Build and publish an image for ${{ env.REPO_LC }}-java17
         uses: macbre/push-to-ghcr@master
         with:
           dockerfile: java17/Dockerfile
-          image_name: ${{ env.REPO_LC }}_java17
+          image_name: ${{ env.REPO_LC }}-java17
           github_token: ${{ secrets.GITHUB_TOKEN }}
