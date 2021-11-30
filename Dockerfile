@@ -22,7 +22,7 @@
 #
 # 
 
-FROM        ghcr.io/pterodactyl/yolks:java_17
+FROM        ghcr.io/pterodactyl/yolks:java_11
 
 LABEL       author="Matthew Penner. MeProject Studio contributors." maintainer="support@meproject.ru"
 
@@ -33,13 +33,13 @@ LABEL org.opencontainers.image.description="This Yolk is made for Pterodactyl pa
 USER        root
 RUN         apt install -y curl unzip
 
-ENV         JMODS_DIR=/usr/lib/jvm/java-17-openjdk-amd64/jmods
-ENV         JMODS_URL=https://download2.gluonhq.com/openjfx/17.0.1/openjfx-17.0.1_linux-x64_bin-jmods.zip
+ENV         JMODS_DIR=/usr/lib/jvm/java-11-openjdk-amd64/jmods
+ENV         JMODS_URL=https://download2.gluonhq.com/openjfx/11/openjfx-11_linux-x64_bin-jmods.zip
 
 RUN         curl -L ${JMODS_URL} -o openjfx.zip \
             && unzip openjfx.zip && rm openjfx.zip \
             && mkdir -p ${JMODS_DIR} \
-            && cp javafx-jmods-17.0.1/* ${JMODS_DIR} && rm -r javafx-jmods-17.0.1/ && chown -R container:container ${JMODS_DIR}
+            && cp javafx-jmods-11/* ${JMODS_DIR} && rm -r javafx-jmods-11/ && ln -s ${JMODS_DIR} /usr/share/openjfx/jmods
             
 USER        container
             
