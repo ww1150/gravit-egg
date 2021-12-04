@@ -11,44 +11,6 @@ on:
       - main
 
 jobs:
-  docker_publish_java11:
-    runs-on: "ubuntu-20.04"
-
-    steps:
-      - uses: actions/checkout@v2
-      - name: Set lower case owner name
-        run: |
-          echo "REPO_LC=${REPO,,}" >>${GITHUB_ENV}
-        env:
-          REPO: '${{ github.repository }}'
-
-      # https://github.com/marketplace/actions/push-to-ghcr
-      - name: Build and publish an image for ${{ env.REPO_LC }}-java11
-        uses: macbre/push-to-ghcr@master
-        with:
-          dockerfile: java11/Dockerfile
-          image_name: ${{ env.REPO_LC }}-java11
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          # optionally push to the Docker Hub (docker.io)
-          # docker_io_token: ${{ secrets.DOCKER_IO_ACCESS_TOKEN }}  # see https://hub.docker.com/settings/security
-          
-  docker_publish_java16:
-    runs-on: "ubuntu-20.04"
-
-    steps:
-      - uses: actions/checkout@v2
-      - name: Set lower case owner name
-        run: |
-          echo "REPO_LC=${REPO,,}" >>${GITHUB_ENV}
-        env:
-          REPO: '${{ github.repository }}'
-
-      - name: Build and publish an image for ${{ env.REPO_LC }}-java16
-        uses: macbre/push-to-ghcr@master
-        with:
-          dockerfile: java16/Dockerfile
-          image_name: ${{ env.REPO_LC }}-java16
-          github_token: ${{ secrets.GITHUB_TOKEN }}
           
   docker_publish_java17:
     runs-on: "ubuntu-20.04"
