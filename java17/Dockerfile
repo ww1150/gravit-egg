@@ -26,7 +26,7 @@ FROM        ghcr.io/pterodactyl/yolks:java_17
 
 LABEL       author="Matthew Penner. MeProject Studio contributors." maintainer="support@meproject.ru"
 
-LABEL       org.opencontainers.image.source="https://github.com/MeProject-Studio/gravit-yolk"
+LABEL       org.opencontainers.image.source="https://github.com/MeProjectStudio/gravit-yolk"
 LABEL       org.opencontainers.image.licenses=MIT
 LABEL       org.opencontainers.image.description="This Yolk is made for Pterodactyl panel as part of GravitLauncher Egg. Based on official Pterodactyl yolk for Java"
 
