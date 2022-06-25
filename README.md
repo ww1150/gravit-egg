@@ -1,2 +1,6 @@
-# gravit-yolk
-This Pterodactyl Yolk was made for Gravit Launchserver and includes **OpenJFX** as jmods
+# Gravit Launcher egg
+Кастомное яйцо для Gravit лаунчера. Использует официальный образ Pterodactyl Java 17 и OpenJFX jmods для JavaFX
+
+
+## Получение обновлений
+Все файлы скачиваются только с официального репозитория лаунчера

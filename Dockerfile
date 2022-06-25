@@ -22,24 +22,24 @@
 #
 # 
 
-FROM        ghcr.io/pterodactyl/yolks:java_11
+FROM        ghcr.io/pterodactyl/yolks:java_17
 
 LABEL       author="Matthew Penner. MeProject Studio contributors." maintainer="support@meproject.ru"
 
-LABEL       org.opencontainers.image.source="https://github.com/MeProject-Studio/gravit-yolk"
+LABEL       org.opencontainers.image.source="https://github.com/MeProjectStudio/gravit-egg"
 LABEL       org.opencontainers.image.licenses=MIT
-LABEL org.opencontainers.image.description="This Yolk is made for Pterodactyl panel as part of GravitLauncher Egg. Based on official Pterodactyl yolk for Java"
+LABEL       org.opencontainers.image.description="This Yolk is made for Pterodactyl panel as part of GravitLauncher Egg. Based on official Pterodactyl yolk for Java"
 
 USER        root
 RUN         apt install -y curl unzip
 
 ENV         JMODS_DIR=/usr/share/openjfx/jmods
-ENV         JMODS_URL=https://download2.gluonhq.com/openjfx/11/openjfx-11_linux-x64_bin-jmods.zip
+ENV         JMODS_URL=https://download2.gluonhq.com/openjfx/17.0.2/openjfx-17.0.2_linux-x64_bin-jmods.zip
 
 RUN         curl -L ${JMODS_URL} -o openjfx.zip \
             && unzip openjfx.zip && rm openjfx.zip \
             && mkdir -p ${JMODS_DIR} \
-            && cp javafx-jmods-11/* ${JMODS_DIR} && rm -r javafx-jmods-11/
+            && cp javafx-jmods-17.0.1/* ${JMODS_DIR} && rm -r javafx-jmods-17.0.2/
             
 USER        container
             

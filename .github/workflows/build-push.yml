@@ -8,7 +8,7 @@ on:
   # publish on pushes to the main branch (image tagged as "latest")
   push:
     branches:
-      - main
+      - master
 
 jobs:
           
@@ -26,6 +26,6 @@ jobs:
       - name: Build and publish an image for ${{ env.REPO_LC }}-java17
         uses: macbre/push-to-ghcr@master
         with:
-          dockerfile: java17/Dockerfile
+          dockerfile: Dockerfile
           image_name: ${{ env.REPO_LC }}-java17
           github_token: ${{ secrets.GITHUB_TOKEN }}
