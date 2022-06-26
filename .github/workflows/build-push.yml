@@ -28,4 +28,4 @@ jobs:
           platforms: linux/amd64
           push: true
           tags: |
-            ghcr.io/MeProjectStudio/gravit_egg:java_17
+            ghcr.io/meprojectstudio/gravit_egg:java_17
