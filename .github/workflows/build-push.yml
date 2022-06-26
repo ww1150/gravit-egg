@@ -26,6 +26,6 @@ jobs:
           context: ./java
           file: ./java/${{ matrix.tag }}/Dockerfile
           platforms: linux/amd64
-          push: if
+          push: true
           tags: |
             ghcr.io/MeProjectStudio/gravit_egg:java_17
