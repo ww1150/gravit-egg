@@ -34,12 +34,12 @@ USER        root
 RUN         apt install -y curl unzip
 
 ENV         JMODS_DIR=/usr/share/openjfx/jmods
-ENV         JMODS_URL=https://download2.gluonhq.com/openjfx/17.0.1/openjfx-17.0.1_linux-x64_bin-jmods.zip
+ENV         JMODS_URL=https://download2.gluonhq.com/openjfx/17.0.2/openjfx-17.0.2_linux-x64_bin-jmods.zip
 
 RUN         curl -L ${JMODS_URL} -o openjfx.zip \
-            && unzip openjfx.zip && rm openjfx.zip
-
-COPY        javafx-jmods-17.0.1/* /usr/share/openjfx/jmods
+            && unzip openjfx.zip && rm openjfx.zip \
+            && mkdir -p ${JMODS_DIR} \
+            && cp javafx-jmods-17.0.2/* /usr/share/openjfx/jmods
             
 USER        container
             
