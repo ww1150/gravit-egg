@@ -1,6 +1,6 @@
 #
 # Copyright (c) 2021 Matthew Penner
-# Copyright (c) 2021 MeProject Studio contributors
+# Copyright (c) 2021-2022 MeProject Studio contributors
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -31,7 +31,7 @@ LABEL       org.opencontainers.image.licenses=MIT
 LABEL       org.opencontainers.image.description="This Yolk is made for Pterodactyl panel as part of GravitLauncher Egg. Based on official Pterodactyl yolk for Java"
 
 USER        root
-RUN         apt install -y curl unzip
+RUN         apt install -y osslsigncode unzip
 
 ENV         JMODS_DIR=/usr/share/openjfx/jmods
 ENV         JMODS_URL=https://download2.gluonhq.com/openjfx/17.0.2/openjfx-17.0.2_linux-x64_bin-jmods.zip
