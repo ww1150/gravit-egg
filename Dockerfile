@@ -22,11 +22,11 @@
 #
 # 
 
-FROM        ghcr.io/pterodactyl/yolks:java_17
+FROM        ghcr.io/pterodactyl/yolks:java_21
 
-LABEL       author="Matthew Penner. MeProject Studio contributors." maintainer="support@meproject.ru"
+LABEL       author="Nonen NHP© Development" maintainer="app@nhpc.ru"
 
-LABEL       org.opencontainers.image.source="https://github.com/MeProjectStudio/gravit-egg"
+LABEL       org.opencontainers.image.source="https://github.com/ww1150/gravit-egg"
 LABEL       org.opencontainers.image.licenses=MIT
 LABEL       org.opencontainers.image.description="This Yolk is made for Pterodactyl panel as part of GravitLauncher Egg. Based on official Pterodactyl yolk for Java"
 
@@ -34,7 +34,7 @@ USER        root
 RUN         apt install -y osslsigncode unzip
 
 ENV         JMODS_DIR=/usr/share/openjfx/jmods
-ENV         JMODS_URL=https://download2.gluonhq.com/openjfx/17.0.2/openjfx-17.0.2_linux-x64_bin-jmods.zip
+ENV         JMODS_URL=https://download2.gluonhq.com/openjfx/21.0.4/openjfx-21.0.4_linux-x64_bin-jmods.zip
 
 RUN         curl -L ${JMODS_URL} -o openjfx.zip \
             && unzip openjfx.zip && rm openjfx.zip \
