@@ -10,8 +10,7 @@
     "description": "Gravit LaunchServer egg.",
     "features": null,
     "docker_images": {
-        "Latest ": "ghcr.io\/meprojectstudio\/gravit-egg:latest",
-        "Edge ": "ghcr.io\/meprojectstudio\/gravit-egg:edge"
+        "Latest ": "ghcr.io\/ww1150\/gravit-egg:latest"
     },
     "file_denylist": [],
     "startup": "java -Xms128M -Xmx{{SERVER_MEMORY}}M -Dterminal.jline=false -Dterminal.ansi=true -javaagent:LaunchServer.jar -jar LaunchServer.jar",
