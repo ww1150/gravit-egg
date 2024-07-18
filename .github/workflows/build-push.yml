@@ -25,7 +25,7 @@ jobs:
           # Tag the image as "edge" for every commit on master.
           # Maintain the "latest", full and major and minor semver tags for each semver tag push
           tags: |
-            type=edge,branch=master
+            type=latest,branch=master
             type=semver,pattern={{version}}
       - uses: docker/setup-buildx-action@v1
         with:
